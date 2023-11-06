@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,13 @@ namespace API.Controllers
         public BuggyController(StoreContext storeContext)
         {
             this._storeContext = storeContext;
+        }
+
+        [HttpGet("testauth")]
+        [Authorize]
+        public ActionResult<string> TestAuth()
+        {
+            return "sucess";
         }
 
         [HttpGet("notfound")]
