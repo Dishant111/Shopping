@@ -16,6 +16,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddSwaggerDocumentation(builder.Configuration);
+
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
 
@@ -25,11 +27,7 @@ var app = builder.Build();
 app.UseExceptionMiddleware();
 app.UseStatusCodePagesWithReExecute("/error/{0}");
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwaggerDocumentation();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
