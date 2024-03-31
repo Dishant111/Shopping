@@ -17,7 +17,7 @@ pipeline {
         stage('Back up') {
             steps {
                fileOperations([
-                   folderRenameOperation(source : 'publish', destination : 'copy'),
+                   folderRenameOperation(source : 'publish', destination : java.time.LocalDate.now()),
                    folderDeleteOperation(folderPath : 'publish')
              ])
             }
