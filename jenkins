@@ -19,10 +19,10 @@ pipeline {
         stage('Back up') {
             steps {
                fileOperations([
-                   folderRenameOperation(source : 'publish', destination : "${curdate}"),
-                   //folderDeleteOperation(folderPath : 'publish'),
-                   fileDeleteOperation(includes : 'publish\\appsettings.json'),
-                   fileCopyOperation(includes : ".\\${curdate}" + "\\appsettings.json", targetLocation : '.\\log')
+                   folderRenameOperation(source : 'publish', destination : "${curdate}")
+             ])
+            fileOperations([
+                   folderDeleteOperation(folderPath : 'publish')
              ])
             }
         }
@@ -34,12 +34,16 @@ pipeline {
         }
         stage('dalete') {
             steps {
-               fileOperations([
-                   //folderRenameOperation(source : 'publish', destination : "${curdate}"),
-                   //folderDeleteOperation(folderPath : 'publish'),
-                   fileDeleteOperation(includes : 'publish\\appsettings.json'),
-                   //fileCopyOperation(includes : ".\\${curdate}" + "\\appsettings.json", targetLocation : '.\\log')
+            fileOperations([
+                   fileDeleteOperation(includes : 'publish\\appsettings.json')
              ])
+            fileOperations([
+                   fileDeleteOperation(includes : 'publish\\appsettings.json')
+             ])
+            fileOperations([
+                   fileCopyOperation(includes : "${curdate}" + "\\appsettings.json", targetLocation : 'publish'),
+                   fileCopyOperation(includes : "${curdate}" + "\\web.config", targetLocation : 'publish')
+            ])
             }
         }
     }
