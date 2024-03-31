@@ -16,10 +16,13 @@ pipeline {
         }
         stage('Back up') {
             steps {
-                bat """
-                     set "fullstamp=%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%"   
-                     xcopy  .\\publish .\\backup\\%datestamp% /E /H /C /I
-                    """
+                script {
+                      DATE_TAG = java.time.LocalDate.now()
+                 }
+               fileOperations {
+                   folderRenameOperation('publish', DATE_TAG)
+                   folderDeleteOperation('publish')
+             }
             }
         }
         
