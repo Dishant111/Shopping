@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Back up') {
             steps {
-                bat 'xcopy  .\\publish .\\backup /E /H /C /I' 
+                bat 'xcopy  .\\publish .\\backup\\${Util.getTimeSpanString(System.currentTimeMillis())} /E /H /C /I' 
             }
         }
         
