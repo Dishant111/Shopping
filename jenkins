@@ -3,6 +3,9 @@ pipeline {
     environment {
         dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
     }
+parameters {
+  string defaultValue: '(new Date()).format("dd MMM,YYYY HH mm", TimeZone.getTimeZone(\'UTC\'))', description: 'this is current data', name: 'currentdata'
+}
     stages {
         stage('Checkout Stage') {
             steps {
@@ -17,7 +20,7 @@ pipeline {
         stage('Back up') {
             steps {
                fileOperations([
-                   folderRenameOperation(source : 'publish', destination : (new Date()).format("dd MMM,YYYY HH mm", TimeZone.getTimeZone('UTC'))),
+                   folderRenameOperation(source : 'publish', destination : currentdata),
                    folderDeleteOperation(folderPath : 'publish')
              ])
             }
