@@ -16,10 +16,10 @@ pipeline {
         }
         stage('Back up') {
             steps {
-               fileOperations {
-                   folderRenameOperation('publish', "copy")
+               fileOperations([
+                   folderRenameOperation('publish', "copy"),
                    folderDeleteOperation('publish')
-             }
+             ])
             }
         }
         
