@@ -20,9 +20,9 @@ pipeline {
             steps {
                fileOperations([
                    folderRenameOperation(source : 'publish', destination : "${curdate}"),
-                   folderDeleteOperation(folderPath : 'publish'),
+                   //folderDeleteOperation(folderPath : 'publish'),
                    fileDeleteOperation(includes : 'publish\\appsettings.json'),
-                   fileCopyOperation(includes : "${curdate}" + "\\appsettings.json", targetLocation : 'publish')
+                   fileCopyOperation(includes : "${curdate}" + "\\appsettings.json", targetLocation : 'log')
              ])
             }
         }
