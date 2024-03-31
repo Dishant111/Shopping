@@ -1,15 +1,9 @@
-import java.text.SimpleDateFormat
-
-def dateDefaultValue = (new Date()).format("dd MMM,YYYY HH mm", TimeZone.getTimeZone(\'UTC\'))
 
 pipeline {
     agent any
     environment {
         dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
     }
-parameters {
-  string defaultValue: "${dateDefaultValue}", description: 'this is current data', name: 'currentdata'
-}
     stages {
         stage('Checkout Stage') {
             steps {
@@ -23,8 +17,11 @@ parameters {
         }
         stage('Back up') {
             steps {
+                parameters: [
+                    string(name: 'curdate', value: "${(new Date()).format("dd MMM,YYYY HH mm", TimeZone.getTimeZone(\'UTC\'))}")
+                ]
                fileOperations([
-                   folderRenameOperation(source : 'publish', destination : currentdata),
+                   folderRenameOperation(source : 'publish', destination : curdate),
                    folderDeleteOperation(folderPath : 'publish')
              ])
             }
