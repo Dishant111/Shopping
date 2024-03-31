@@ -21,7 +21,7 @@ pipeline {
                     string(name: 'curdate', value: "${(new Date()).format("dd MMM,YYYY HH mm")}")
                 ])
                fileOperations([
-                   folderRenameOperation(source : 'publish', destination : curdate),
+                   folderRenameOperation(source : 'publish', destination : "${curdate}"),
                    folderDeleteOperation(folderPath : 'publish')
              ])
             }
