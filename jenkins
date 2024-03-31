@@ -16,8 +16,11 @@ pipeline {
         }
         stage('Back up') {
             steps {
+             script {
+                    def now = new Date()
+                }
                fileOperations([
-                   folderRenameOperation(source : 'publish', destination : java.time.LocalDate.now()),
+                   folderRenameOperation(source : 'publish', destination : now.format("yyMMddHHmm", TimeZone.getTimeZone('UTC'))),
                    folderDeleteOperation(folderPath : 'publish')
              ])
             }
