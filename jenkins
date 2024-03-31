@@ -22,8 +22,8 @@ pipeline {
         }
     }
    post {
-    sucess {
-    echo 'build finished'
+    success {
+        echo 'build finished'
     }
    }
 }
