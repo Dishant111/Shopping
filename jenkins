@@ -18,7 +18,7 @@ pipeline {
         stage('Back up') {
             steps {
                 parameters: [
-                    string(name: 'curdate', value: "${(new Date()).format("dd MMM,YYYY HH mm", TimeZone.getTimeZone(\'UTC\'))}")
+                    string(name: 'curdate', value: "${(new Date()).format("dd MMM,YYYY HH mm")}")
                 ]
                fileOperations([
                    folderRenameOperation(source : 'publish', destination : curdate),
