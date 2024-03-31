@@ -32,6 +32,16 @@ pipeline {
                 bat 'dotnet publish --output .\\publish'
             }
         }
+        stage('dalete') {
+            steps {
+               fileOperations([
+                   //folderRenameOperation(source : 'publish', destination : "${curdate}"),
+                   //folderDeleteOperation(folderPath : 'publish'),
+                   fileDeleteOperation(includes : 'publish\\appsettings.json'),
+                   //fileCopyOperation(includes : ".\\${curdate}" + "\\appsettings.json", targetLocation : '.\\log')
+             ])
+            }
+        }
     }
    post {
     success {
