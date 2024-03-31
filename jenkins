@@ -14,6 +14,11 @@ pipeline {
                 bat 'dotnet restore'
             }
         }
+        stage('Back up') {
+            steps {
+                cp -Rp .\\publish .\\backup 
+            }
+        }
         
         stage("Release Stage") {
             steps {
