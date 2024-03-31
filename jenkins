@@ -41,8 +41,8 @@ pipeline {
                    fileDeleteOperation(includes : 'publish\\appsettings.json')
              ])
             fileOperations([
-                   fileCopyOperation(includes : "${curdate}" + "\\appsettings.json", targetLocation : 'publish'),
-                   fileCopyOperation(includes : "${curdate}" + "\\web.config", targetLocation : 'publish')
+                   fileCopyOperation(includes : ".\\${curdate}" + "\\appsettings.json", targetLocation : 'publish'),
+                   fileCopyOperation(includes : ".\\${curdate}" + "\\web.config", targetLocation : 'publish')
             ])
             }
         }
