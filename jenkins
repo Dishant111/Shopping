@@ -21,4 +21,9 @@ pipeline {
             }
         }
     }
+   post {
+    sucess {
+    echo 'build finished'
+    }
+   }
 }
