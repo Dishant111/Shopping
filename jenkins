@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    environment {
+        dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
+    }
+    stages {
+        stage('Checkout Stage') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Build Stage') {
+            steps {
+                bat 'dotnet restore'
+            }
+        }
+        
+        stage("Release Stage") {
+            steps {
+                bat 'dotnet publish --output .\\publish'
+            }
+        }
+    }
+}
