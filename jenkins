@@ -3,6 +3,7 @@ pipeline {
     agent any
     environment {
         dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
+        curdate = (new Date()).format("dd MMM,YYYY HH mm")
     }
     stages {
         stage('Checkout Stage') {
@@ -17,9 +18,6 @@ pipeline {
         }
         stage('Back up') {
             steps {
-                parameters([
-                    string(name: 'curdate', value: "${(new Date()).format("dd MMM,YYYY HH mm")}")
-                ])
                fileOperations([
                    folderRenameOperation(source : 'publish', destination : "${curdate}"),
                    folderDeleteOperation(folderPath : 'publish')
