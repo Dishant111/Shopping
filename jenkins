@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Back up') {
             steps {
-                bat 'xcopy  .\\publish .\\backup' 
+                bat 'xcopy  .\\publish .\\backup /E /H /C /I' 
             }
         }
         
