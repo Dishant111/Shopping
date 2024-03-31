@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Back up') {
             steps {
-                cp -Rp .\\publish .\\backup 
+                cp -Rp publish backup 
             }
         }
         
