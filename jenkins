@@ -17,8 +17,8 @@ pipeline {
         stage('Back up') {
             steps {
                fileOperations([
-                   folderRenameOperation('publish', "copy"),
-                   folderDeleteOperation('publish')
+                   folderRenameOperation(source : 'publish', destination : 'copy'),
+                   folderDeleteOperation(folderPath : 'publish')
              ])
             }
         }
