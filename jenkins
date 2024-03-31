@@ -16,11 +16,8 @@ pipeline {
         }
         stage('Back up') {
             steps {
-                script {
-                      DATE_TAG = java.time.LocalDate.now()
-                 }
                fileOperations {
-                   folderRenameOperation('publish', DATE_TAG)
+                   folderRenameOperation('publish', "copy")
                    folderDeleteOperation('publish')
              }
             }
