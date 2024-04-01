@@ -43,7 +43,7 @@ pipeline {
             fileOperations([
                    fileCopyOperation(excludes: '', flattenFiles: false, includes : "${curdate}" + "\\appsettings.json", targetLocation : 'publish'),
                    fileCopyOperation(includes : ".\\${curdate}" + "\\web.config", targetLocation : 'publish')
-            ]),
+            ])
             fileOperations([
                    fileZipOperation(folderPath : "${curdate}",outputFolderPath : '')
             ])
