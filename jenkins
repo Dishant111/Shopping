@@ -19,7 +19,8 @@ pipeline {
         stage('Back up') {
             steps {
                fileOperations([
-                   folderRenameOperation(source : 'publish', destination : "${curdate}")
+                   fileCopyOperation(excludes: 'publish/wwwroot', flattenFiles: false, includes : "publish" + "/**.*", targetLocation : './${curdate}')
+                   //folderRenameOperation(source : 'publish', destination : "${curdate}")
              ])
             fileOperations([
                    folderDeleteOperation(folderPath : 'publish')
@@ -48,10 +49,10 @@ pipeline {
                    //fileCopyOperation(includes : ".\\${curdate}" + "\\web.config", targetLocation : 'publish')
             ])
             fileOperations([
-                   fileZipOperation(folderPath : "${curdate}",outputFolderPath : '')
+                  // fileZipOperation(folderPath : "${curdate}",outputFolderPath : '')
             ])
             fileOperations([
-                   folderDeleteOperation(folderPath : "${curdate}")
+                   //folderDeleteOperation(folderPath : "${curdate}")
              ])
             }
         }
