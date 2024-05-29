@@ -22,9 +22,9 @@ pipeline {
                    fileCopyOperation(excludes: 'publish/wwwroot/**/*.*', flattenFiles: false, includes : "publish" + "/**/*.*", targetLocation : "${curdate}")
                    //folderRenameOperation(source : 'publish', destination : "${curdate}")
              ])
-            //fileOperations([
-                   //folderDeleteOperation(folderPath : 'publish')
-             //])
+            fileOperations([
+                   folderDeleteOperation(folderPath : 'publish')
+             ])
             }
         }
         
