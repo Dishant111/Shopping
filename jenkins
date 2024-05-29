@@ -41,7 +41,6 @@ pipeline {
                   // fileDeleteOperation(includes : 'publish\\appsettings.json')
              ])
             fileOperations([
-                   //fileCopyOperation(excludes: '', flattenFiles: false, includes : ".\\${curdate}" + "\\*.json", targetLocation : './publish'),
                    //fileCopyOperation(excludes: '', flattenFiles: false, includes : "\\${curdate}" + "\\*.json", targetLocation : './publish'),
                    //fileCopyOperation(excludes: '', flattenFiles: false, includes : "${curdate}" + "/*.json", targetLocation : './publish'),
                    fileCopyOperation(excludes: '', flattenFiles: true, includes : "${curdate}" + "/appsettings.json", targetLocation : './publish'),
@@ -50,6 +49,9 @@ pipeline {
             fileOperations([
                    fileZipOperation(folderPath : "${curdate}",outputFolderPath : '')
             ])
+            fileOperations([
+                   folderDeleteOperation(folderPath : "${curdate}")
+             ])
             }
         }
     }
