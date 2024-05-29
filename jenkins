@@ -19,7 +19,7 @@ pipeline {
         stage('Back up') {
             steps {
                fileOperations([
-                   fileCopyOperation(excludes: 'publish/wwwroot/**/*.*', flattenFiles: false, includes : "publish" + "/**/*.*", targetLocation : '${curdate}')
+                   fileCopyOperation(excludes: 'publish/wwwroot/**/*.*', flattenFiles: false, includes : "publish" + "/**/*.*", targetLocation : "${curdate}")
                    //folderRenameOperation(source : 'publish', destination : "${curdate}")
              ])
             fileOperations([
