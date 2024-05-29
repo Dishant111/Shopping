@@ -44,7 +44,8 @@ pipeline {
                    //fileCopyOperation(excludes: '', flattenFiles: false, includes : "\\${curdate}" + "\\*.json", targetLocation : './publish'),
                    //fileCopyOperation(excludes: '', flattenFiles: false, includes : "${curdate}" + "/*.json", targetLocation : './publish'),
                    fileCopyOperation(excludes: '', flattenFiles: true, includes : "${curdate}" + "/appsettings.json", targetLocation : './publish'),
-                   fileCopyOperation(includes : ".\\${curdate}" + "\\web.config", targetLocation : 'publish')
+                   fileCopyOperation(excludes: '', flattenFiles: true, includes : "${curdate}" + "/web.config", targetLocation : './publish')
+                   //fileCopyOperation(includes : ".\\${curdate}" + "\\web.config", targetLocation : 'publish')
             ])
             fileOperations([
                    fileZipOperation(folderPath : "${curdate}",outputFolderPath : '')
