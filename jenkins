@@ -59,7 +59,7 @@ pipeline {
         stage('Deploye to IIS') {
             steps {
                fileOperations([
-                   fileDeleteOperation(excludes: "F:/iis/shopping/publish/wwwroot/**/*.*",includes : "F:/iis/shopping/publish" + "/**/*.*")
+                   fileDeleteOperation(excludes: "F:\\iis\\shopping\\publish\\wwwroot\\**\\*.*",includes : "F:\\iis\\shopping\\publish" + "\\**\\*.*")
              ])
             fileOperations([
                    fileCopyOperation(excludes: "publish/wwwroot/**/*.*", flattenFiles: false, includes : "publish" + "/**/*.*", targetLocation : 'F:/iis/shopping')
