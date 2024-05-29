@@ -35,7 +35,7 @@ pipeline {
         stage('dalete') {
             steps {
             fileOperations([
-                   fileDeleteOperation(includes : 'publish\\appsettings.json')
+                  // fileDeleteOperation(includes : 'publish\\appsettings.json')
              ])
             fileOperations([
                   // fileDeleteOperation(includes : 'publish\\appsettings.json')
