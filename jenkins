@@ -23,7 +23,7 @@ pipeline {
                    //folderRenameOperation(source : 'publish', destination : "${curdate}")
              ])
             fileOperations([
-                   folderDeleteOperation(folderPath : 'publish')
+                   //folderDeleteOperation(folderPath : 'publish')
              ])
             }
         }
