@@ -3,7 +3,7 @@ pipeline {
     agent any
     environment {
         dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
-        curdate = (new Date()).format("dd MMM,YYYY HH mm")
+        curdate = (new Date()).format("ddMMMYYYYHHmm")
     }
     stages {
         stage('Checkout Stage') {
