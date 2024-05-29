@@ -33,7 +33,7 @@ pipeline {
                 bat 'dotnet publish --output .\\publish'
             }
         }
-        stage('delete') {
+        stage('configuration') {
             steps {
             fileOperations([
                    //fileDeleteOperation(includes : 'publish\\appsettings.json')
