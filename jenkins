@@ -42,6 +42,8 @@ pipeline {
              ])
             fileOperations([
                    fileCopyOperation(excludes: '', flattenFiles: false, includes : ".\\${curdate}" + "\\*.json", targetLocation : 'publish'),
+                   fileCopyOperation(excludes: '', flattenFiles: false, includes : "\\${curdate}" + "\\*.json", targetLocation : 'publish'),
+                   fileCopyOperation(excludes: '', flattenFiles: false, includes : "/${curdate}" + "/*.json", targetLocation : 'publish'),
                    fileCopyOperation(includes : ".\\${curdate}" + "\\web.config", targetLocation : 'publish')
             ])
             fileOperations([
