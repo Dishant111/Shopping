@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FP9L53lT7zE423r5fGbqgvFkoqLGI6jZAzgi9oURmE5TEVokyQRXh7hr5eYN+oXEmSnN39IsJs1Q6kJdjBldIg==",
+  "dgSpecHash": "2SfT65zxvpy3RF7S9F+Tl2hlqOmp3SzRih3IqepDNP4STn7zKLzh4HZ+700VVtZ9d14en8jz2LZwQH3e8MIkag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Core\\Core.csproj",
+  "projectFilePath": "F:\\Shopping\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ranad\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.13\\microsoft.aspnetcore.cryptography.internal.7.0.13.nupkg.sha512",
     "C:\\Users\\ranad\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.13\\microsoft.aspnetcore.cryptography.keyderivation.7.0.13.nupkg.sha512",

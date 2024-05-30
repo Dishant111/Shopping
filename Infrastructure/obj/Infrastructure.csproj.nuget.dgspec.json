@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Infrastructure\\Infrastructure.csproj": {}
+    "F:\\Shopping\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Core\\Core.csproj": {
+    "F:\\Shopping\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Core\\Core.csproj",
+        "projectUniqueName": "F:\\Shopping\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Core\\Core.csproj",
+        "projectPath": "F:\\Shopping\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\ranad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Core\\obj\\",
+        "outputPath": "F:\\Shopping\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,18 +66,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Infrastructure\\Infrastructure.csproj": {
+    "F:\\Shopping\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "F:\\Shopping\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "F:\\Shopping\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ranad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Infrastructure\\obj\\",
+        "outputPath": "F:\\Shopping\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,14 +92,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\Core\\Core.csproj"
+              "F:\\Shopping\\Core\\Core.csproj": {
+                "projectPath": "F:\\Shopping\\Core\\Core.csproj"
               }
             }
           }
@@ -146,7 +148,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jawgLW7Xw/TNHLWCkWNiu4mJcE+FBB7whzwWsY3ymriCw/uBMuyPLwqf+hy47SxxDPZcJCipDrogpLyqd+iJ+g==",
+  "dgSpecHash": "xeQTLdMyIWRqc25AP7a1Rmk98ksK9z9oi+wLTYgvj90tYFJub8WqAuT8Z9eaZdqBDC61Df7r9c2O4RCyH/ONAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ranad\\source\\repos\\Udemy\\API\\Shopping\\API\\API.csproj",
+  "projectFilePath": "F:\\Shopping\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ranad\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ranad\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -49,6 +49,7 @@
     "C:\\Users\\ranad\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\ranad\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\ranad\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\ranad\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512",
     "C:\\Users\\ranad\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\ranad\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\ranad\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
