@@ -19,5 +19,5 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Push the images to Docker Hub
-      run: docker push docker-hub-username/container-name
+      run: docker push dishantdev/shoppingapi
         
