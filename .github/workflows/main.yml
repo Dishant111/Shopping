@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . -t dishantdev/shoppingapi:latest
+      run: docker build . -t dishantdev/shoppingapi:${{vars.APP_VERSION}}
     - name: Log into Docker Hub
       uses: docker/login-action@v2
       with:
