@@ -44,18 +44,7 @@ using (var scope = app.Services.CreateScope())
     var identityContext = serviceProvider.GetRequiredService<AppIdentityDbContext>();
     var _userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
     var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
-    try
-    {
-        await context.Database.MigrateAsync();
-        await StoreContextSeed.SeedData(context);
-        await identityContext.Database.MigrateAsync();
-        await AppIdentityDbContextSeed.SeedUsersAsync(_userManager);
-    }
-    catch (Exception ex)
-    {
-        logger.LogError(ex, "An error occured while running migration!");
-        throw;
-    }
+    
 }
 
 app.Run();
